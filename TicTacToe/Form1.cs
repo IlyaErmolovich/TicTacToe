@@ -16,5 +16,19 @@ namespace TicTacToe
         {
             InitializeComponent();
         }
+
+        private void CellClick(object sender, MouseEventArgs e)
+        {
+            if (sender is PictureBox cell && cell.Image == null)
+            {
+                if(e.Button == MouseButtons.Left)
+                {
+                    cell.Image = Properties.Resources.cross;
+                } else if (e.Button == MouseButtons.Right) 
+                {
+                    cell.Image = Properties.Resources.circle;
+                }
+            }
+        }
     }
 }
