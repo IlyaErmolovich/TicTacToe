@@ -41,6 +41,8 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.restart = new System.Windows.Forms.Button();
+            this.result = new System.Windows.Forms.Label();
             panel1 = new System.Windows.Forms.Panel();
             panel2 = new System.Windows.Forms.Panel();
             panel3 = new System.Windows.Forms.Panel();
@@ -58,7 +60,7 @@
             // 
             // panel1
             // 
-            panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             panel1.BackColor = System.Drawing.Color.Black;
             panel1.Location = new System.Drawing.Point(146, 12);
             panel1.Name = "panel1";
@@ -67,7 +69,7 @@
             // 
             // panel2
             // 
-            panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             panel2.BackColor = System.Drawing.Color.Black;
             panel2.Location = new System.Drawing.Point(290, 12);
             panel2.Name = "panel2";
@@ -188,12 +190,33 @@
             this.pictureBox9.TabStop = false;
             this.pictureBox9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CellClick);
             // 
+            // restart
+            // 
+            this.restart.Enabled = false;
+            this.restart.Location = new System.Drawing.Point(353, 456);
+            this.restart.Name = "restart";
+            this.restart.Size = new System.Drawing.Size(75, 23);
+            this.restart.TabIndex = 13;
+            this.restart.Text = "Заново";
+            this.restart.UseVisualStyleBackColor = true;
+            this.restart.Click += new System.EventHandler(this.restart_Click);
+            // 
+            // result
+            // 
+            this.result.AutoSize = true;
+            this.result.Location = new System.Drawing.Point(12, 461);
+            this.result.Name = "result";
+            this.result.Size = new System.Drawing.Size(0, 13);
+            this.result.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(440, 440);
+            this.ClientSize = new System.Drawing.Size(440, 491);
+            this.Controls.Add(this.result);
+            this.Controls.Add(this.restart);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox9);
@@ -222,6 +245,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -235,6 +259,8 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Button restart;
+        private System.Windows.Forms.Label result;
     }
 }
 
